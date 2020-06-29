@@ -1,0 +1,306 @@
+:root{
+    --max-width: 1200px;
+    --border-top: 1px solid #0a0a1014;
+    --border-bottom: 1px solid #0a0a1014;
+    --color:#F35C58;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body, input, button{
+    margin: 0;
+    font: 14px 'Nunito', sans-serif;
+}
+
+body{
+    -webkit-font-smoothing: antialiased;
+}
+
+.container{
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.nav-bar{
+    width: 100%;
+    height: 55px;
+    background-color: white;
+    border-top: var(--border-top);
+    border-bottom: var(--border-bottom);
+    padding: 10px;
+}
+
+.nav-bar span{
+    display: none;
+}
+
+.nav-items{
+    width: 100%;
+    background-color: white;
+    height: 50px;
+}
+
+.nav-items a{
+    display: block;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    padding: 16px 25px;
+}
+
+.nav-items a.active{
+    color: var(--color);
+}
+
+.nav-items a:hover{
+    color: var(--color);
+}
+
+.nav-items ul{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.nav-items li{
+    list-style: none;
+    display: block;
+}
+
+.nav-items li:hover{
+    background-color: #E5E5E5;
+    color: var(--color);
+}
+
+.nav-img{
+    margin-left: 5%;
+}
+
+.nav-img img{
+    width: 80px;
+    height: auto;
+}
+
+.nav-img a:hover{
+    background-color: #E5E5E5;
+}
+
+.slide-show img{
+    width: 150px;
+    border-radius: 5px;
+}
+
+.footer{
+    background-color: #F1F2FA;
+    width: 100%;
+    border-top: var(--border-top);
+}
+
+.footer img{
+    width: 84px;
+    height: 32px;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border-bottom: var(--border-bottom);
+}
+
+.media-social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rede-social{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rede-social a{
+    cursor: pointer;
+}
+
+.rede-social a + a{
+    margin-left: 10px;
+}
+
+.rede-social img{
+    width: 20px;
+    height: 20px;
+}
+
+.sky-informacoes{
+    grid-template-columns: 50% 1fr 1fr;
+    display: grid;
+    gap: 25px;
+    padding: 35px 0;
+}
+
+.sky-informacoes img{
+    width: 50px;
+    height: 50px;
+}
+
+.app{
+    display: flex;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.app span{
+    display: flex;
+    flex-direction: column;
+}
+
+.app p{
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.sobre-sky label, 
+.respons-sky label{
+    display: flex;
+    color: rgba(0, 0, 0, 0.38);
+    font-weight: bold;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.sobre-sky p, 
+.respons-sky p{
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 12px;
+    font-weight: normal;
+    margin: 8px 0;
+}
+
+.sobre-sky p + label, .respons-sky p + label{
+    margin-top: 20px;
+}
+
+.sobre-sky p:hover,
+.respons-sky p:hover{
+    color: var(--color);
+    cursor: pointer;
+}
+
+.link-footer{
+    background-color: white;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.link-footer a{
+    text-decoration: none;
+    font: 14px 'Nunito', sans-serif;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.link-footer a:hover{
+    color: var(--color);
+}
+
+.link-footer span{
+    margin: 0 5px;
+}
+
+.direitos{
+    background-color: #F1F2FA;
+    font-size: 12.5px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.direitos p, span{
+    flex-direction: column;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+@media only screen and (max-width: 700px){
+    body{
+        font-size: 5px;
+    }
+
+    .nav-bar{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-bar span{
+        display: block;
+    }
+
+    .nav-items a{
+        font-size: 10px;
+    }
+
+    .slide-show{
+        padding: 10px;
+    }
+
+    .slide-show img{
+        width: 100%;
+        height: auto;
+    }
+
+    .footer{
+        width: 100%;
+    }
+
+    .social{
+        width: 100%;
+        display: flex;
+    }
+
+    .rede-social img{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .sky-informacoes{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .app, .sobre-sky, .respons-sky{
+        margin-bottom: 20px;
+    }
+
+    .app p, .app span{
+        font-size: 12px;
+        color: var(--color);
+    }
+
+    .sobre-sky p, 
+    .respons-sky p{
+        font-size: 10px;
+        margin: 4px 0;
+    }
+
+    .sobre-sky label, 
+    .respons-sky label{
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+    .slide-show img{
+        width: 100%;
+        height: auto;
+    }
+}
